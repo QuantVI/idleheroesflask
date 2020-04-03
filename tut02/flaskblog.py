@@ -1,6 +1,13 @@
 # https://www.youtube.com/watch?v=MwZwr5Tvyxo
 # Python Flask Tutorial: Full- Featured Web App Part 1- Getting Started
 
+NOTES = """
+Using the app.run(debug=True) is easier to use when we want to run
+this script directly. However, if we are a going to import this script,
+we would not used __main__, but instead the name of the module.
+(imported to? or this file?)
+"""
+
 from flask import Flask
 # instantiate Flask application
 app = Flask(__name__)
@@ -8,29 +15,21 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Something other than hello world."
+    return "<h1>Something else besides hello world.</h1>"
 
-@app.route("/")
+@app.route("/vince_example")
 def goodbye():
-    return "Something other than hello world."
+    return "<i>A line other than hello world.</i>"
 
-# In the Windows command line use
-# $>    set FLASK_APP=flakblog.py
-# so that you can type the following command to run the app
-# $>    flask run
-# if using the GitBack command line in Windows, use "export"
-# as below for the Max terminal.
+# two routes can be handled by the same function as well
+@app.route("/about")
+@app.route("/not_about")
+def about():
+    return "<u>The about page.</u>"
+# both /about and /not_about will run the about() function
 
 
-# In the Mac terminal use
-# $>    export FLASK_APP=flakblog.oy
-# so that you can type the following command to run the app
-# $>    flask run
-
-# Alternatively, you can type
-# $>    python flaskblog.py
-# ah. this line doesn't work if we don't hae it in debug mode
-# and if we don't set what to do whn python runs __main__
-
+# only works when script run directly
+#   >>> python flaskblog.py
 if __name__ == "__main__":
     app.run(debug=True)
