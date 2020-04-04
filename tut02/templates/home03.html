@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+    {% block content %}
+    <!--We got rid of everything outside of the body tags.
+    We just keep the for loop that is unique to this page. -->
+        {% for post in posts %}
+            <font face="Nunito">{{ post.title }}</font>
+            <p><t>By {{ post.author }} on {{ post.date_posted }}</t></p>
+        {% endfor %}
+    {% endblock content %}

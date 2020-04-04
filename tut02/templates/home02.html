@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--- If we don't pass in a title we want the default.
+        However, if we do, let's you an if lock to display something else.
+        The title here will be the name of the tab/window in the browser.-->
+        {% if title %}
+            <title>Flask Blog -  {{ title }}</title>
+        {% else %}
+            <title>Flask Blog</title>
+        {% endif %}
+    </head>
+    <body>
+        <!--The below is how we make a code block within the html page.
+        We need to have a start and end to the code block, and put the
+        requisite code inbetween. -->
+        {% for post in posts %}
+            <font face="Nunito">{{ post.title }}</font>
+            <p><t>By {{ post.author }} on {{ post.date_posted }}</t></p>
+        {% endfor %}
+    </body>
+</html>

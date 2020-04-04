@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- the above was copied from https://getbootstrap.com/docs/4.4/getting-started/introduction/
+        We need it to add "bootstrap stuff" to our pages automatically. -->
+
+        {% if title %}
+            <title>Flask Blog -  {{ title }}</title>
+        {% else %}
+            <title>Flask Blog</title>
+        {% endif %}
+    </head>
+
+    <body>
+        <!-- we put a block here. A block is a section that the child templates can overwrite.
+        The name of this block will be "content".
+        Our Home and About templates wll inherit from this layout template.
+        Then we will override the "content" section with the stuff that is
+        unique to each page.  
+    
+        Now that we've added bootstrap stuff, we can wrap the content
+        in a bootsrap-specific class.-->
+
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+        
+
+
+        <!-- this below is also fro the bootstrap Starter Template.
+        Link is abobe in the head section.-->
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    </body>
+</html>

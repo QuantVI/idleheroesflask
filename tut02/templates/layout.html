@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% if title %}
+            <title>Flask Blog -  {{ title }}</title>
+        {% else %}
+            <title>Flask Blog</title>
+        {% endif %}
+    </head>
+    <body>
+        <!-- we put a block here. A block is a section that the
+        child templates can overwrite.
+    The name of this block will be "content".
+    Our Home and About templates wll inherit from this layout template.
+    Then we will override the "content" section with the stuff that is
+    unique to each page.  -->
+        {% block content %}{% endblock %}
+    </body>
+</html>

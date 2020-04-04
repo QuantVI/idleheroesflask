@@ -1,6 +1,5 @@
-# From https://github.com/rannmann/Idle-Heroes-RDB
+## From https://github.com/rannmann/Idle-Heroes-RDB
 Thanks.
-
 
 ----
 
