@@ -4,3 +4,4 @@ This data encodes the items and combination rules needed to synthesize them. Wit
 Though the sturcture of the database may change later, it's a good start. This can be the basis of the backend that the app read and writes from.
 
 The Database is in `.db` format and should load into SQLite/SQLite3 easily.
+
