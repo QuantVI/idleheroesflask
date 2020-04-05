@@ -1,5 +1,6 @@
 # https://www.youtube.com/watch?v=QnDWIZuWYW0
 # Python Flask Tutorial: Full- Featured Web App Part 2
+	# by Corey Schafer
 
 # stopped around 22:27 minutes, after adding bootstrap.
 

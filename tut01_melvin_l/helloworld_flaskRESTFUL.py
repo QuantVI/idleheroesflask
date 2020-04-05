@@ -1,6 +1,7 @@
 # uses flash restufl to make code easier to write, read, maintain
 # https://www.youtube.com/watch?v=s_ht4AKnWZg
 # Building a REST API using Python and Flask | Flask-RESTful
+	# by Melvin L
 
 from flask import Flask, request
 from flask_restful import Resource, Api
