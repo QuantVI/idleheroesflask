@@ -1,6 +1,6 @@
 ### Follow 4 short videos on YouTube, by [Pretty Printed](https://www.youtube.com/channel/UC-QDfvrRIDB6F0bIO4I4HkQ/videos)
 
-1. Creating a RESTFul API With Flask [1 of 4] - Get Requests [_link_](<https://www.youtube.com/watch?v=CjYKrbq8BCw>)
+1. Creating a RESTFul API With Flask [1 of 4] - Get Requests [_link_](https://www.youtube.com/watch?v=CjYKrbq8BCw)
 2. Creating a RESTFul API with Python and Flask [2 of 4] - POST Requests [_link_](https://www.youtube.com/watch?v=qH--M56OsUg)
 3. Creating a RESTFul API Using Python and Flask [3 of 4] - PUT Requests [_link_](https://www.youtube.com/watch?v=2gunLuqHvc8)
 4. Creating a RESTFul API With Flask [4 of 4] - DELETE Requests [_link_](<https://www.youtube.com/watch?v=I64c1L_Zl2Y>)
@@ -11,3 +11,6 @@ One thing I don't enjoy about Python tutorials and a lot of Python code out ther
 
 
 
+For working with the endpoint, I will sue the [Tabbed Postman - REST Client](<https://chrome.google.com/webstore/detail/tabbed-postman-rest-clien/coohjcphdfgbiolnekdpbcijmhambjff/related?hl=en-US>) add-on/extension for Google Chrome. It should simplify sending `PUT`, `POST`, and `DELETE` requests.
+
+- For some reason the Tabbed Postman extension had issues and errors sending  POST requests. I had to install the POSTMAN standalone application instead.
