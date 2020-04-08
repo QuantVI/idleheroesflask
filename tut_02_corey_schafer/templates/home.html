@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-    </head>
-    <body>
-        <h1>Something else besides hello world.</h1>
-        <h2>Welcome to the Home Page, via HTML file.</h2>
-    </body>
-</html>
+{% extends "layout.html" %}
+    {% block content %}
+    <!--We got rid of everything outside of the body tags.
+    We just keep the for loop that is unique to this page. -->
+        {% for post in posts %}
+        <article class="media content-section">
+            <div class="media-body">
+              <div class="article-metadata">
+                <a class="mr-2" href="#">{{ post.author }}</a>
+                <small class="text-muted">{{ post.date_posted }}</small>
+              </div>
+              <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+              <p class="article-content">{{ post.content }}</p>
+            </div>
+          </article>
+        {% endfor %}
+    {% endblock content %}
